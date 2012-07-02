@@ -9,9 +9,7 @@ url=$1
 open_cmd=${LOCAL_OPEN_CMD-"open"}
 
 if [[ -z $SSH_CLIENT ]] && [[ -z $SSH_CLIENT ]]; then
-  if type local-open > /dev/null; then
-    open_cmd=`which local-open`
-  elif type xdg-open > /dev/null; then
+  if hash xdg-open 2>/dev/null; then
     open_cmd=`which xdg-open`
   else
     open_cmd=`which open`
