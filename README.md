@@ -4,7 +4,7 @@ Do you sometimes open webpages from the terminal, but work in a headless VM or o
 
 how it works
 ------------
-**local-open** assumes there's a reverse SSH tunnel from the current machine to your base one. When you provide a URL to **local-open** it simply issues the appropriate `open` command through the tunnel on your base machine.
+Simply put, when you provide a URL to **local-open**, it issues the appropriate `open` command on your base machine through SSH.
 
 If the URL is specific to the current machine (contains `localhost` or `127.0.0.1`), a domain name which is reachable from the base machine will be substituted, if possible. **local-open** is also smart enough to know when you're *not* in a SSH session, and will just open the URL on the current machine in those cases.
 
