@@ -7,6 +7,8 @@ user=${LOCAL_OPEN_USER-$USER}
 alt_localhost=${ALT_LOCALHOST-`hostname`}
 url=$1
 open_cmd=${LOCAL_OPEN_CMD-"open"}
+host=${LOCAL_OPEN_HOST-"localhost"}
+port=${LOCAL_OPEN_PORT-22}
 
 if [[ -z $SSH_CLIENT ]] && [[ -z $SSH_CLIENT ]]; then
   if hash xdg-open 2>/dev/null; then
@@ -21,5 +23,5 @@ else
   elif [[ "$url" == *"127.0.0.1"* ]]; then
     url=${url/127\.0\.0\.1/$alt_localhost}
   fi
-  ssh -l $user -p $LOCAL_OPEN_PORT localhost "$open_cmd $url"
+  ssh -l $user -p $port $host "$open_cmd $url"
 fi
