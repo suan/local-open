@@ -12,7 +12,6 @@ OSX and Linux is supported.
 
 setup
 -----
-- If your base machine is inaccessible from the remote one, you need to setup a reverse SSH tunnel. The below section has instructions.
 - Download the `local-open` script and place it somewhere in your `PATH` on the *remote machine*. For example, run this from `~/bin/`:
 
     ```
@@ -24,7 +23,7 @@ setup
   - **LOCAL_OPEN_USER**: Username for the SSH connection to the base machine. *Defaults to the current SSH session's username.*
   - **LOCAL_OPEN_CMD**: The "open" command to use on the base machine, e.g. `"open"` or `"xdg-open"`. *Defaults to "open".*
   - **ALT_LOCALHOST**: The domain name which will replace `localhost` or `127.0.0.1` in URLs. *Defaults to the hostname of the current machine.*
-
+- If your base machine is inaccessible from the remote one, you need to setup a reverse SSH tunnel. The below section has instructions.
 - Now, when you do `local-open <URL>`, the URL will be opened on your base machine's browser!
 - If you like, you could create an `xdg-open` function in your `.bashrc` or equivalent which calls `local-open` instead for URLs. This would make any program which uses `xdg-open` automatically use `local-open`. (Some people don't like overriding system commands like that so I've left that out)
 
