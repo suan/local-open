@@ -40,8 +40,8 @@ ssh -f -N -R 1999:localhost:22 user@remotehost
 ```
 
 
-### fugitive.vim's :Gbrowse integration ###
-To make **local-open** work when you use fugitive.vim's `:Gbrowse`, ensure the following exists in your `~/.gitconfig`:
+### fugitive.vim integration ###
+To make **local-open** work when you use fugitive.vim commands such as `:Gbrowse`, ensure the following exists in your `~/.gitconfig`:
 
 ```
 [web]
