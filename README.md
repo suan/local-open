@@ -50,6 +50,13 @@ To make **local-open** work when you use fugitive.vim commands such as `:Gbrowse
 	cmd = local-open
 ```
 
+### [hub][hub_link] integration ###
+To use **local-open** when you perform commands such as `git browse`, you need to set the `$BROWSER` environment variable. Put this in your `~/.bashrc` or equivalent:
+
+```bash
+export BROWSER="local-open"
+```
+
 bugs, etc.
 ----------
 Please goto the project page at http://github.com/suan/local-open to report bugs, request features, or if you want to browse the code.
@@ -57,3 +64,4 @@ Please goto the project page at http://github.com/suan/local-open to report bugs
 
 
 [autossh]: http://www.debianadmin.com/autossh-automatically-restart-ssh-sessions-and-tunnels.html
+[hub_link]: https://github.com/defunkt/hub
